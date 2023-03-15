@@ -1,7 +1,7 @@
 import './style.css'
 
 import Card from './src/components/Card';
-import createElement from './src/components/createElement';
+import createElement from './src/helpers/createElement';
 
 const container = document.querySelector('#app');
 container.classList.add('container-fluid')
