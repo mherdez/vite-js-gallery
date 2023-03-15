@@ -4,6 +4,7 @@ const createElement = ( props ) => {
 
 const {el = 'div', text = '', src = `https://picsum.photos/id/${Math.floor(Math.random() * 300 + 1)}/200/300`, clas = []} = props;
 
+console.log(src)
 const elemento = document.createElement(el)
 
 if(el == 'p' || el.includes('h')) {
