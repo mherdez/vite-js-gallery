@@ -1,6 +1,6 @@
 
 
-const Element = ( props ) => {
+const createElement = ( props ) => {
 
 const {el = 'div', text = '', src = `https://picsum.photos/id/${Math.floor(Math.random() * 300 + 1)}/200/300`, clas = []} = props;
 
@@ -24,4 +24,4 @@ if(clas) {
   return elemento
 }
 
-export default Element;
+export default createElement;

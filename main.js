@@ -1,7 +1,7 @@
 import './style.css'
 
 import Card from './src/components/Card';
-import Element from './src/components/Element';
+import createElement from './src/components/createElement';
 
 const container = document.querySelector('#app');
 container.classList.add('container-fluid')
@@ -10,31 +10,31 @@ container.classList.add('text-center')
 container.classList.add('mx-auto')
 
 //PRIMERA VERSION
-// let row = document.createElement('div')
+// let row = document.createcreateElement('div')
 // row.classList.add('row')
 // container.append(row)
 
-// let col = document.createElement('div')
+// let col = document.createcreateElement('div')
 // col.classList.add('col')
 
 // col.append(Card())
 // row.append(col)
 
 
-// col = document.createElement('div')
+// col = document.createcreateElement('div')
 // col.classList.add('col')
 
 // col.append(Card())
 // row.append(col)
 
-// col = document.createElement('div')
+// col = document.createcreateElement('div')
 // col.classList.add('col')
 
 // col.append(Card())
 // row.append(col)
 
 //SEGUNDA VERSION
-// const tarjeta = Element(
+// const tarjeta = createElement(
 //   {
 //     el : 'div',
 //     clas: [
@@ -43,7 +43,7 @@ container.classList.add('mx-auto')
 //   }
 //   )
 
-//   const tarjetaImg = Element(
+//   const tarjetaImg = createElement(
 //   {
 //     el : 'img',
 //     text: 'hola mundo',
@@ -55,7 +55,7 @@ container.classList.add('mx-auto')
 //         }
 //         )
 
-//         const tarjetaTxt = Element(
+//         const tarjetaTxt = createElement(
 //           {
 //             el : 'h5',
 //             text: 'hola mundo',
@@ -66,7 +66,7 @@ container.classList.add('mx-auto')
 //   }
 //   )
 
-//   const rowTarjeta = Element(
+//   const rowTarjeta = createElement(
 //   {
 //     el : 'div',
 //     clas: [
@@ -75,7 +75,7 @@ container.classList.add('mx-auto')
 //           ]
 //   }
 //   )
-//   const colTarjeta = Element(
+//   const colTarjeta = createElement(
 //   {
 //     el : 'div',
 //     clas: [
@@ -100,13 +100,13 @@ const clas = ['card-text', 'mt-2', 'p-2', 'fs-5', 'fw-bold', 'text-primary']
 
 for (let lineas = 1; lineas <= FILAS; lineas++) {
 
-  let $row  = Element({el:'div',clas:['row', 'mt-3']})
+  let $row  = createElement({el:'div',clas:['row', 'mt-3']})
 
   for(let e = 1; e <= COLUMNAS; e++) {
-    let $col  = Element({el:'div',clas:['col']})
-    let $card = Element({el:'div',clas:['card', 'p-3']})
-    let $cardImg = Element({el:'img', clas:['card-img-top']})
-    let $cardTxt = Element({el:'h4', clas,  text: 'Fotito'})
+    let $col  = createElement({el:'div',clas:['col']})
+    let $card = createElement({el:'div',clas:['card', 'p-3']})
+    let $cardImg = createElement({el:'img', clas:['card-img-top']})
+    let $cardTxt = createElement({el:'h4', clas,  text: 'Fotito'})
     $card.append($cardImg)
     $card.append($cardTxt)
     $col.append($card)
